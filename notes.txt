@@ -54,6 +54,7 @@ Actions
 Events that a user does or page loads or data received they can optionally call an action creator.
 And action creator returns an object that is then sent to all of the reducers in the application.
 Reducers can return a different piece of state depending on what the action is.
+We always set the action type to be a constant value so that it is always the same throughout the application. Otherwise it will effect all reducers throughout.
 
 Action Creators
 ===========
@@ -61,6 +62,12 @@ Errors that actions must be plain objects means they must return an object with 
 type: 'BOOK_SELECTED',
 payload: book
 
+Middleware
+=========
+Middleware is a function that take an action and depening on the type and payload the middleware can manipluate the action, pass it through or deny it.
+Gatekeeper before it gets to the reducer.
+You can have many middlewares that can be multiple functions.
+Redux Promise is a package that we use that will interpret our promise and just return us the data array that we need. Pretty fricking cool!
 
 Map Dispatch To Props
 =========
@@ -73,3 +80,7 @@ this.onInputChange = this.onInputChange.bind(this);
 The instance of our component has a function called onInputChange we are saying bind it to that
 and then replace it with the existing function.
 If you are passing a callback remember to bind it to the context.
+
+AJAX Requests In Redux
+=========
+Get an API key and store it as a string contstant within the actions file.
