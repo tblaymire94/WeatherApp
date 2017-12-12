@@ -84,3 +84,13 @@ If you are passing a callback remember to bind it to the context.
 AJAX Requests In Redux
 =========
 Get an API key and store it as a string contstant within the actions file.
+
+Ref
+=========
+Used to setup a reference to a specific HTML element within the application.
+So for the Google map we can access it from anywhere via this.refs.map.
+We can also render elements within them.
+
+componentDidMount
+=========
+This is a lifecycle method that is called automatically when the component is rendered on the screen.
